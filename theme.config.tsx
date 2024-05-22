@@ -1,6 +1,7 @@
 
 import React from 'react'
 import { DocsThemeConfig } from 'nextra-theme-docs'
+import { useConfig } from 'nextra-theme-docs'
 
 const config: DocsThemeConfig = {
   logo: (
@@ -15,7 +16,7 @@ const config: DocsThemeConfig = {
   },
   toc: {
     backToTop: true
-  },
+  }
 }
 
 export default config
