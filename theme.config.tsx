@@ -13,9 +13,6 @@ const config: DocsThemeConfig = {
   sidebar: {
     defaultMenuCollapseLevel: 10,
     toggleButton: true,
-  },
-  toc: {
-    backToTop: true
   }
 }
 
