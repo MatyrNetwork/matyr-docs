@@ -9,15 +9,12 @@ const config: DocsThemeConfig = {
       MatyrNetwork
     </span>
   ),
-  project: {
-    link: 'https://github.com/shuding/nextra-docs-template',
+  sidebar: {
+    defaultMenuCollapseLevel: 10,
+    toggleButton: true,
   },
-  chat: {
-    link: 'https://discord.com',
-  },
-  docsRepositoryBase: 'https://github.com/shuding/nextra-docs-template',
-  footer: {
-    text: 'Nextra Docs Template',
+  toc: {
+    backToTop: true
   },
 }
 
