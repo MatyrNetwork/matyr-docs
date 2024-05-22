@@ -1,0 +1,80 @@
+import { Tabs, Tab } from "nextra-theme-docs";
+import { Callout } from "nextra/components";
+
+# matyr_progbar
+
+## set progbar
+<Tabs items={['Default', 'Control', 'Animation', 'Props']}>
+    <Tab>
+    ```js copy
+    exports['matyr_progbar']:Progress {
+        name = "",
+        duration = 0,
+        label = "",
+        useWhileDead = false,
+        canCancel = true,
+        disarm = true,
+    }
+    ```
+    </Tab>
+    <Tab>
+    ```js copy
+    exports['matyr_progbar']:Progress {
+        name = "",
+        duration = 0,
+        label = "",
+        useWhileDead = false,
+        canCancel = true,
+        disarm = true,
+        controlDisables = {
+            disableMovement = false,
+            disableCarMovement = false,
+            disableMouse = false,
+            disableCombat = false,
+        },
+    }
+    ```
+    </Tab>
+    <Tab>
+    ```js copy
+    exports['matyr_progbar']:Progress {
+        name = "",
+        duration = 0,
+        label = "",
+        useWhileDead = false,
+        canCancel = true,
+        disarm = true,
+        animation = {
+            animDict = nil,
+            anim = nil,
+            flags = 0,
+            task = nil,
+        },
+    }
+    ```
+    </Tab>
+    <Tab>
+    ```js copy
+    exports['matyr_progbar']:Progress {
+        name = "",
+        duration = 0,
+        label = "",
+        useWhileDead = false,
+        canCancel = true,
+        disarm = true,
+        prop = {
+            model = nil,
+            bone = nil,
+            coords = { x = 0.0, y = 0.0, z = 0.0 },
+            rotation = { x = 0.0, y = 0.0, z = 0.0 },
+        },
+        propTwo = {
+            model = nil,
+            bone = nil,
+            coords = { x = 0.0, y = 0.0, z = 0.0 },
+            rotation = { x = 0.0, y = 0.0, z = 0.0 },
+        },
+    }
+    ```
+    </Tab>
+</Tabs>

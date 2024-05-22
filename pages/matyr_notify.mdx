@@ -1,0 +1,25 @@
+import { Tabs, Tab } from 'nextra-theme-docs';
+import { Callout } from 'nextra/components';
+
+# matyr_notify
+## set notify
+<Tabs items={['Client', 'Server']}>
+  <Tab>
+    ```js copy
+    exports['matyr_notify']:notify(data)
+    ```
+  </Tab>
+  <Tab>
+    ```js copy
+    TriggerClientEvent('matyr_notify:Id', source, {data})
+    ```
+  </Tab>
+</Tabs>
+
+- type = `inform`, `success`, `error`, `warn`[default `inform`] 
+
+- text = `string`
+
+- duration = : `int`[default `3000`]
+
+- sound = `boolean`[default `false`]

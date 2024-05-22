@@ -1,0 +1,19 @@
+# matyr_chat
+## set chat
+
+```js copy
+
+TriggerEvent("chatMessage", "Testing", "normal", "Test")
+TriggerEvent("chatMessage", "Testing", "warning", "Test")
+TriggerEvent("chatMessage", "Testing", "error", "Test")
+```
+- name = player name or something 
+- type = `normal` `warning` `error`
+- text = custom
+
+
+``` js copy filename="@chat/html/css/style.css"
+.type-name {
+  background-color: rgba(0, 0, 0, 0.85);
+}
+```

@@ -1,17 +1,47 @@
-import React from 'react'
-import { DocsThemeConfig } from 'nextra-theme-docs'
+import { useRouter } from 'next/router'
+import type { DocsThemeConfig } from 'nextra-theme-docs'
+import { useConfig } from 'nextra-theme-docs'
 
 const config: DocsThemeConfig = {
-  logo: <span>My Project</span>,
-  project: {
-    link: 'https://github.com/shuding/nextra-docs-template',
-  },
-  chat: {
-    link: 'https://discord.com',
-  },
-  docsRepositoryBase: 'https://github.com/shuding/nextra-docs-template',
+  logo: (
+    <span style={{ display: 'flex', alignItems: 'center' }}>
+      <img src="/static/icon.png" alt="MatyrNetwork-Logo" style={{ height: '40px', marginRight: '8px' }} />
+      MatyrNetwork
+    </span>
+  ),
   footer: {
-    text: 'Nextra Docs Template',
+    text: (
+      <span>
+        <a href="#" target="_blank">
+          ©MatyrNetwork.
+        </a>
+      </span>
+    ),
+  },
+  docsRepositoryBase: 'https://github.com/your-repo/docs',
+  useNextSeoProps() {
+    const { asPath } = useRouter()
+    if (asPath !== '/') {
+      return {
+        titleTemplate: '%s – MatyrNetwork'
+      }
+    }
+  },
+  head: function useHead() {
+    return (
+      <>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta httpEquiv="Content-Language" content="en" />
+        <link rel="icon" href="/../static/icon.png" type="image/png" />
+      </>
+    )
+  },
+  sidebar: {
+    defaultMenuCollapseLevel: 10,
+    toggleButton: true,
+  },
+  toc: {
+    backToTop: true
   },
 }
 
