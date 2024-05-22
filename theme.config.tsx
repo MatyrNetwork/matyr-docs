@@ -1,6 +1,5 @@
 
 import React from 'react'
-import { useRouter } from 'next/router'
 import { DocsThemeConfig } from 'nextra-theme-docs'
 
 const config: DocsThemeConfig = {
