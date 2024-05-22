@@ -3,7 +3,21 @@ import React from 'react'
 import { DocsThemeConfig } from 'nextra-theme-docs'
 
 const config: DocsThemeConfig = {
-  logo: <span>My Project</span>,
+  logo: (
+    <span style={{ display: 'flex', alignItems: 'center' }}>
+      <img src="/static/icon.png" alt="MatyrNetwork-Logo" style={{ height: '40px', marginRight: '8px' }} />
+      MatyrNetwork
+    </span>
+  ),
+  footer: {
+    text: (
+      <span>
+        <a href="#" target="_blank">
+          ©MatyrNetwork.
+        </a>
+      </span>
+    ),
+  },
   project: {
     link: 'https://github.com/shuding/nextra-docs-template',
   },
@@ -11,9 +25,21 @@ const config: DocsThemeConfig = {
     link: 'https://discord.com',
   },
   docsRepositoryBase: 'https://github.com/shuding/nextra-docs-template',
-  footer: {
-    text: 'Nextra Docs Template',
+  sidebar: {
+    defaultMenuCollapseLevel: 10,
+    toggleButton: true,
   },
+  toc: {
+    backToTop: true
+  },
+  useNextSeoProps() {
+    const { asPath } = useRouter()
+    if (asPath !== '/') {
+      return {
+        titleTemplate: '%s – MatyrNetwork'
+      }
+    }
+  }
 }
 
 export default config
