@@ -35,7 +35,16 @@ const config: DocsThemeConfig = {
         rawTitle === category ? 'Documentation' : category.replace(/(^\w|\s\w)/g, (m) => m.toUpperCase())
       }`,
     };
-  }
+  },
+  footer: {
+    text: (
+      <span>
+        <a href="#" target="_blank">
+          ©MatyrNetwork.
+        </a>
+      </span>
+    )
+  },
 }
 
 export default config
