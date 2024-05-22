@@ -31,14 +31,6 @@ const config: DocsThemeConfig = {
   },
   toc: {
     backToTop: true
-  },
-  useNextSeoProps() {
-    const { asPath } = useRouter()
-    if (asPath !== '/') {
-      return {
-        titleTemplate: '%s – MatyrNetwork'
-      }
-    }
   }
 }
 
