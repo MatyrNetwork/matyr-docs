@@ -1,8 +1,6 @@
 
 import React from 'react'
-import { useRouter } from 'next/router'
 import { DocsThemeConfig } from 'nextra-theme-docs'
-import { useConfig } from 'nextra-theme-docs'
 
 const config: DocsThemeConfig = {
   logo: (
@@ -11,33 +9,15 @@ const config: DocsThemeConfig = {
       MatyrNetwork
     </span>
   ),
+  project: {
+    link: 'https://github.com/shuding/nextra-docs-template',
+  },
+  chat: {
+    link: 'https://discord.com',
+  },
+  docsRepositoryBase: 'https://github.com/shuding/nextra-docs-template',
   footer: {
-    text: (
-      <span>
-        <a href="#" target="_blank">
-          ©MatyrNetwork.
-        </a>
-      </span>
-    ),
-  },
-  docsRepositoryBase: 'https://github.com/your-repo/docs',
-  useNextSeoProps() {
-    const { asPath } = useRouter()
-    return asPath !== '/' ? { titleTemplate: '%s – MatyrNetwork' } : undefined;
-  },
-  head: () => (
-    <>
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <meta httpEquiv="Content-Language" content="en" />
-      <link rel="icon" href="/../static/icon.png" type="image/png" />
-    </>
-  ),
-  sidebar: {
-    defaultMenuCollapseLevel: 10,
-    toggleButton: true,
-  },
-  toc: {
-    backToTop: true
+    text: 'Nextra Docs Template',
   },
 }
 
