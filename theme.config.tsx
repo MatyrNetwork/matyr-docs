@@ -52,7 +52,7 @@ const config: DocsThemeConfig = {
   primarySaturation: {
     light: 100,
     dark: 12
-  }
+  },
 }
 
 export default config
