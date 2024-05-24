@@ -1,7 +1,6 @@
 import React from 'react';
 import { useRouter } from 'next/router';
 import { DocsThemeConfig } from 'nextra-theme-docs';
-import { useConfig } from 'nextra-theme-docs';
 
 const config: DocsThemeConfig = {
   logo: (
@@ -46,10 +45,6 @@ const config: DocsThemeConfig = {
   primaryHue: {
     light: 247,
     dark: 247,
-  },
-  primarySaturation: {
-    light: 100,
-    dark: 12,
   },
 };
 
