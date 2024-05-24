@@ -41,11 +41,7 @@ const config: DocsThemeConfig = {
         </a>
       </span>
     ),
-  },
-  primaryHue: {
-    light: 247,
-    dark: 247,
-  },
+  }
 };
 
 export default config;
