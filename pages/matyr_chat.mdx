@@ -1,16 +1,31 @@
+import { Tabs, Tab } from 'nextra-theme-docs';
+import { Callout } from 'nextra/components';
+
 # matyr_chat
-## set chat
+## Set Chat
+<Tabs items={['Client', 'Server']}>
+  <Tab>
+    ```js copy
+    TriggerEvent("chatMessage", "name", "type", "text")
+    ```
+  </Tab>
+  <Tab>
+    ```js copy
+    TriggerClientEvent('chatMessage', -1, 'name', 'type' ,'text')
+    ```
+  </Tab>
+</Tabs>
 
-```js copy
 
-TriggerEvent("chatMessage", "name", "type", "text")
-```
+
 - name = player name or something 
 - type = `normal` `warning` `error`
 - text = custom
 
-### custom type
-``` js copy filename="@chat/html/css/style.css"
+---
+
+### Custom Type
+``` js copy filename="@matyr_chat/html/css/style.css"
 .type-name {
   background-color: rgba(0, 0, 0, 0.85);
 }
