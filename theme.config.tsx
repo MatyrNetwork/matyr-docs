@@ -1,7 +1,6 @@
 import React from 'react'
 import { useRouter } from 'next/router'
 import { DocsThemeConfig } from 'nextra-theme-docs'
-import Search from '@components/Search'
 
 const config: DocsThemeConfig = {
   logo: (
