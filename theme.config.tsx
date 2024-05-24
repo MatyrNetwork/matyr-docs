@@ -1,7 +1,7 @@
-import React from 'react'
-import { useRouter } from 'next/router'
-import { DocsThemeConfig } from 'nextra-theme-docs'
-import { useConfig } from 'nextra-theme-docs'
+import React from 'react';
+import { useRouter } from 'next/router';
+import { DocsThemeConfig } from 'nextra-theme-docs';
+import { useConfig } from 'nextra-theme-docs';
 
 const config: DocsThemeConfig = {
   logo: (
@@ -14,16 +14,14 @@ const config: DocsThemeConfig = {
     defaultMenuCollapseLevel: 10,
     toggleButton: true,
   },
-  head: function useHead() {
-    return (
-      <>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta httpEquiv="Content-Language" content="en" />
-        <link rel="icon" href="/static/icon.png" type="image/png" />
-      </>
-    )
-  },
-  useNextSeoProps: function() {
+  head: () => (
+    <>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <meta httpEquiv="Content-Language" content="en" />
+      <link rel="icon" href="/static/icon.png" type="image/png" />
+    </>
+  ),
+  useNextSeoProps: () => {
     const { asPath } = useRouter();
     const arr = asPath.replace(/[-_]/g, ' ').split('/');
     const category = (arr[1] && arr[1][0] !== '#' && arr[1]) || 'MatyrNetwork';
@@ -43,16 +41,16 @@ const config: DocsThemeConfig = {
           ©MatyrNetwork.
         </a>
       </span>
-    )
+    ),
   },
   primaryHue: {
     light: 247,
-    dark: 247
+    dark: 247,
   },
   primarySaturation: {
     light: 100,
-    dark: 12
+    dark: 12,
   },
-}
+};
 
-export default config
+export default config;
