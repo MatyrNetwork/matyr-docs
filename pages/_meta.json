@@ -1,7 +1,14 @@
 {
-  "index": "Introduction",
-  "-": {
-    "type": "separator",
-    "title" : "Fivem"
+  "index": {
+    "title": "Home",
+    "type": "page"
+  },
+  "fivem": {
+    "title": "Fivem",
+    "type": "page"
+  },
+  "minecraft": {
+    "title": "Minecraft",
+    "type": "page"
   }
 }
