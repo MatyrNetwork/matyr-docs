@@ -1,16 +1,19 @@
+import { SpeedInsights } from "@vercel/speed-insights/next";
+
 # matyr_key
+
 ## set keyboard
 
 ```js copy
 local keyboard = exports["matyr_key"]:key({
-    header = "Add Items", 
+    header = "Add Items",
     rows = {
         {
-            id = 0, 
+            id = 0,
             txt = "Spawn Name"
         },
         {
-            id = 1, 
+            id = 1,
             txt = "Amount"
         }
     }

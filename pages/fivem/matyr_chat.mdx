@@ -1,31 +1,27 @@
-import { Tabs, Tab } from 'nextra-theme-docs';
-import { Callout } from 'nextra/components';
+import { Tabs, Tab } from "nextra-theme-docs";
+import { Callout } from "nextra/components";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 # matyr_chat
+
 ## Set Chat
-<Tabs items={['Client', 'Server']}>
+
+<Tabs items={["Client", "Server"]}>
+  <Tab>```js copy TriggerEvent("chatMessage", "name", "type", "text") ```</Tab>
   <Tab>
-    ```js copy
-    TriggerEvent("chatMessage", "name", "type", "text")
-    ```
-  </Tab>
-  <Tab>
-    ```js copy
-    TriggerClientEvent('chatMessage', -1, 'name', 'type' ,'text')
-    ```
+    ```js copy TriggerClientEvent('chatMessage', -1, 'name', 'type' ,'text') ```
   </Tab>
 </Tabs>
 
-
-
-- name = player name or something 
+- name = player name or something
 - type = `normal` `warning` `error`
 - text = custom
 
 ---
 
 ### Custom Type
-``` js copy filename="@matyr_chat/html/css/style.css"
+
+```js copy filename="@matyr_chat/html/css/style.css"
 .type-name {
   background-color: rgba(0, 0, 0, 0.85);
 }
