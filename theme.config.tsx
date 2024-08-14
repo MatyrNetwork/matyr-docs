@@ -1,7 +1,8 @@
 import React from 'react';
 import { useRouter } from 'next/router';
 import { DocsThemeConfig } from 'nextra-theme-docs';
-import { SpeedInsights } from "@vercel/speed-insights/next";
+import { SpeedInsights } from "@vercel/speed-insights/next"
+
 
 const config: DocsThemeConfig = {
     logo: (
@@ -18,8 +19,6 @@ const config: DocsThemeConfig = {
         <>
             <meta name="viewport" content="width=device-width, initial-scale=1.0" />
             <meta httpEquiv="Content-Language" content="en" />
-            <meta charSet="UTF-8" />
-            <html lang="en" />
             <link rel="icon" href="/static/icon.png" type="image/png" />
             <meta name="description" content="Learn about the MatyrNetwork, its features, and how it can help you build robust network solutions." />
             <meta property="og:title" content="Introduction to MatyrNetwork" />
@@ -27,6 +26,7 @@ const config: DocsThemeConfig = {
             <meta property="og:type" content="article" />
             <meta property="og:url" content="https://matyrnetwork.my.id/docs/introduction" />
             <meta property="og:image" content="https://matyrnetwork.my.id/images/matyrnetwork-intro.jpg" />
+
         </>
     ),
     useNextSeoProps: () => {
